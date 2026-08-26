@@ -1,0 +1,96 @@
+body {
+    background: rgb(255, 248, 248);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 20px;
+}
+
+.container {
+    background: rgb(240, 226, 226);
+    color: black;
+    width: 100%;
+    max-width: 420px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 25px;
+    font-family: Georgia, sans-serif;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 2px solid rgb(248, 247, 247);
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus,
+select:focus {
+    border-color: #d8d2d2;
+    box-shadow: 0 0 10px rgba(235, 37, 37, 0.3);
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    border: none;
+    background: #a37b7b;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #dea4a4;
+    transform: scale(1.02);
+}
+
+.card {
+    background: #f1f5f9;
+    border-left: 6px solid #2563eb;
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 15px;
+    line-height: 1.8;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.08);
+}
+
+#lista {
+    margin-top: 20px;
+}
+
+input[type="file"] {
+    background: #f07272;
+    cursor: pointer;
+}
+
+@media(max-width: 100px) {
+
+    .container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    button {
+        font-size: 15px;
+    }
+}

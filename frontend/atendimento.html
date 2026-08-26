@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<div class="container">
+<h2>Atendimento</h2>
+
+<input id="nome" placeholder="Nome">
+<input id="cpf" placeholder="CPF">
+
+<select id="tipo">
+  <option>Convenio</option>
+  <option>Particular</option>
+</select>
+
+<input type="file" id="foto">
+
+<button onclick="cadastrar()">Cadastrar</button>
+</div>
+
+<script>
+function cadastrar(){
+ fetch("http://localhost:3000/atendimento",{
+  method:"POST",
+  headers:{"Content-Type":"application/json"},
+  body: JSON.stringify({
+    nome completo: nome.value,
+    CPF/RG ou outro documento: CPF/RG.value, 
+    sexo: sexo.value, 
+    idade: idade.value,
+    Data de Nascimento: Data de Nascimento.value
+    Nome da Mãe: Nome da Mãe.value
+    Estado Civil: Estado Civil.value,
+    Endereço: Endereço.value,
+    Telefone: Telefone.value,
+    E-mail:E-mail.value, 
+    Contato de emergencia: Contato de emergencia.value,
+    tipo: tipo.value,
+  })
+ });
+ alert("Paciente enviado para triagem");
+}
+</script>
+</body>
+</html> 
+ 
