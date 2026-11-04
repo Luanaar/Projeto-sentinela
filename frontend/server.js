@@ -145,6 +145,16 @@ app.get("/medicacoes", (req, res) => {
   res.json(db.consultas);
 });
 
+// Endpoint simples de saúde da API para a Central do Desenvolvedor
+app.get("/health", (req, res) => {
+  res.set("Cache-Control", "no-store");
+  res.json({
+    status: "ok",
+    service: "Sentinela API",
+    timestamp: new Date().toISOString()
+  });
+});
+
 // START
 const PORT=process.env.PORT
 ||3000;
